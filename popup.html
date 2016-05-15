@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<style>
+  body {
+    width: 400px;
+    padding: 25px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  #go {
+    position: relative;
+    top: 0;
+    transition: all .1s linear;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    background: red;
+    border: none;
+    border-bottom: 7px solid rgba(0, 0, 0, .25);
+    border-radius: 10px;
+  }
+
+  #go:focus {
+    outline: none;
+  }
+
+  #go:active {
+    top: 7px;
+    border-bottom-width: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  }
+
+  #go > .logo {
+    width: 128px;
+    height: 128px;
+  }
+
+  #go > h1 {
+    color: white;
+    font-size: 42px;
+    margin: 0;
+  }
+
+  body.active #go {
+    transition: width .25s ease, opacity .25s ease;
+    width: 100%;
+    border-radius: 0;
+    opacity: 0;
+  }
+
+  #streetview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <button id="go">
+      <img class="logo" src="logo.png">
+      <h1>Picnic</h1>
+    </button>
+  </header>
+  <script src="utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

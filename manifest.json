@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Picnic",
+  "version": "1.0",
+  "description": "Be more spontaneous. Have a picnic.",
+  "icons": {
+    "512": "logo.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["utils.js", "bg.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "512": "logo.png"
+    },
+    "default_title": "It's adventure time.",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.eat24.com/*", "*://*.eat24hours.com/*"],
+      "js": ["utils.js", "eat24.js"]
+    },
+    {
+      "matches": ["https://m.uber.com/*"],
+      "js": ["utils.js", "uber.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "geolocation"
+  ]
+}
