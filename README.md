@@ -19,3 +19,5 @@ If make something like Picnic, please share it with me!
 
 Developed for the [San Francisco Stupid Shit No One Needs and Terrible Ideas
 "Hackathon"](https://stupidhackathon.github.io/) in 2016.
+
+Logo created by [konahart](https://github.com/konahart).
